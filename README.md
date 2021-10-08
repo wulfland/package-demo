@@ -97,11 +97,11 @@ $ git push
 
 9. If the workflow has completed, you can find you package under `Code`.
 
-<img width="500" alt="004_see-package" src="https://user-images.githubusercontent.com/5276337/136528558-b9283c83-4e9a-4320-b7b0-2bc7601174a6.png">
+<img width="900" alt="004_see-package" src="https://user-images.githubusercontent.com/5276337/136528558-b9283c83-4e9a-4320-b7b0-2bc7601174a6.png">
 
 10. Click on the package to see the details:
 
-<img width="500" alt="005_package-details" src="https://user-images.githubusercontent.com/5276337/136528589-a25eed4f-6381-4b6d-b4c7-8e28ebc05a08.png">
+<img width="900" alt="005_package-details" src="https://user-images.githubusercontent.com/5276337/136528589-a25eed4f-6381-4b6d-b4c7-8e28ebc05a08.png">
 
 > **Note:**  
 > If you want to create new releases, you have to update the version in `package.json`. Otherwise the build will fail.
