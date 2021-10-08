@@ -77,3 +77,21 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
+6. Create a file `.npmrc` in the root of your repository with the following content:
+
+```
+@YOUR-USER:registry=https://npm.pkg.github.com
+```
+
+7. Commit and push the new files:
+
+```
+$ git add .github/workflows/release-package.yml .npmrc
+$ git commit -m "Add workflow to pusblish package"
+$ git push
+```
+
+8. Create a release. Go to `Code`| `Releases`and click `Draft new Release`. Create a new tag and entre a title. If you create the release, the workflow will automatically run.
+
+<img width="500" alt="003_create-release" src="https://user-images.githubusercontent.com/5276337/136526942-2b6ebb28-bbe8-46df-84b3-ba02f76cbeb1.png">
+
