@@ -43,7 +43,7 @@ jobs:
       - name: 'Change NPM version'
         uses: reedyuk/npm-version@1.1.1
         with:
-          version: ${github.event.release.name}
+          version: ${github.event.release.tag_name}
           # version: $GITVERSION_SEMVER
       
       - run: npm ci
