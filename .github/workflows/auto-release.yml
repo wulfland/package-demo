@@ -24,6 +24,8 @@ jobs:
       
       - name: Install GitReleaseManager
         uses: gittools/actions/gitreleasemanager/setup@v0.9.7
+        with:
+          versionSpec: '0.11.x'
       
       - name: Create release with GitReleaseManager
         uses: gittools/actions/gitreleasemanager/publish@v0.9.2
@@ -32,4 +34,7 @@ jobs:
           owner: 'wulfland'
           repository: 'package-demo'
           name: $GITVERSION_SEMVER
+          #assets:  |
+          #  SourceCode.zip
+          #  SourceCode.cab
 
