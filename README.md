@@ -18,7 +18,7 @@
     alert("Hello, World!");
     ```
 
-3. If you have `npm` installed on your machine, run `npm init` and initialize your package using the wizard. Leave the defaults for the other values. 
+4. If you have `npm` installed on your machine, run `npm init` and initialize your package using the wizard. Leave the defaults for the other values. 
 
     ```
     $ npm init
@@ -31,7 +31,7 @@
 
     If you don't have npm installed, just clone this repository and copy the files `package.json` and `package-lock.json` to you local repo. Adjust the URLs and package name to include your username and repo.
 
-4. Commit and push your files:
+5. Commit and push your files:
 
     ```
     $ git add index.js package.json package-lock.json
@@ -39,7 +39,7 @@
     $ git push
     ```
 
-5. Create a file `.github/workflows/release-package.yml` and copde the following content to it:
+6. Create a file `.github/workflows/release-package.yml` and copde the following content to it:
 
     ```YAML
     name: Node.js Package
@@ -77,13 +77,13 @@
               NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     ```
 
-6. Create a file `.npmrc` in the root of your repository with the following content:
+7. Create a file `.npmrc` in the root of your repository with the following content:
 
     ```
     @YOUR-USER:registry=https://npm.pkg.github.com
     ```
 
-7. Commit and push the new files:
+8. Commit and push the new files:
 
     ```
     $ git add .github/workflows/release-package.yml .npmrc
@@ -91,22 +91,22 @@
     $ git push
     ```
 
-8. Create a release. Clock on `Releases` under `Code` and click `Draft new Release`. Create a new tag and enter a title. If you create the release, the workflow will automatically run.
+9. Create a release. Clock on `Releases` under `Code` and click `Draft new Release`. Create a new tag and enter a title. If you create the release, the workflow will automatically run.
 
     <img width="500" alt="003_create-release" src="https://user-images.githubusercontent.com/5276337/136526942-2b6ebb28-bbe8-46df-84b3-ba02f76cbeb1.png">
 
-9. If the workflow has completed, you can find you package under `Code`.
+10. If the workflow has completed, you can find you package under `Code`.
 
     <img width="900" alt="004_see-package" src="https://user-images.githubusercontent.com/5276337/136528558-b9283c83-4e9a-4320-b7b0-2bc7601174a6.png">
 
-10. Click on the package to see the details:
+11. Click on the package to see the details:
 
     <img width="900" alt="005_package-details" src="https://user-images.githubusercontent.com/5276337/136528589-a25eed4f-6381-4b6d-b4c7-8e28ebc05a08.png">
 
     > **Note:**  
     > If you want to create new releases, you have to update the version in `package.json`. Otherwise the build will fail.
 
-11. Automatically set package numer  
+12. Automatically set package numer  
     You can automate this step by adding the `NPM-Version` action and set it to the tag of the release:
 
     ```YAML
@@ -118,11 +118,11 @@
 
     Add this step to you yaml before the `- run: npm ci` step and create a new release. The package version is now set automatically to the tag.
 
-12. Calculate the version with GitVersion
+13. Calculate the version with GitVersion
     If you have a more complex workflow you can use `GitVersion` to calculate your version number. You have to make your checkout shallow for that to work:
     
     ```yaml
-        - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with: 
           fetch-depth: 0
     ```
