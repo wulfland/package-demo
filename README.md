@@ -8,7 +8,7 @@
 
    <img width="400" alt="002_clone or open" src="https://user-images.githubusercontent.com/5276337/136523686-adeb6542-79c5-41d7-8012-6823e52dfec3.png">
 
-    ```
+    ```console
     $ git clone <URL>
     ```
 
@@ -20,7 +20,7 @@
 
 4. If you have `npm` installed on your machine, run `npm init` and initialize your package using the wizard. Leave the defaults for the other values. 
 
-    ```
+    ```console
     $ npm init
     ...
     package name: @YOUR-USER/YOUR-REPO
@@ -33,7 +33,7 @@
 
 5. Commit and push your files:
 
-    ```
+    ```console
     $ git add index.js package.json package-lock.json
     $ git commit -m "Initialize package"
     $ git push
@@ -79,13 +79,13 @@
 
 7. Create a file `.npmrc` in the root of your repository with the following content:
 
-    ```
+    ```yaml
     @YOUR-USER:registry=https://npm.pkg.github.com
     ```
 
 8. Commit and push the new files:
 
-    ```
+    ```console
     $ git add .github/workflows/release-package.yml .npmrc
     $ git commit -m "Add workflow to pusblish package"
     $ git push
