@@ -91,7 +91,7 @@
     $ git push
     ```
 
-9. Create a release. Clock on `Releases` under `Code` and click `Draft new Release`. Create a new tag and enter a title. If you create the release, the workflow will automatically run.
+9. Create a release. Click on `Releases` under `Code` and click `Draft new Release`. Create a new tag and enter a title. If you create the release, the workflow will automatically run.
 
     <img width="500" alt="003_create-release" src="https://user-images.githubusercontent.com/5276337/136526942-2b6ebb28-bbe8-46df-84b3-ba02f76cbeb1.png">
 
