@@ -106,7 +106,7 @@
     > **Note:**  
     > If you want to create new releases, you have to update the version in `package.json`. Otherwise the build will fail.
 
-12. Automatically set package numer  
+12. Automatically set package number  
     You can automate this step by adding the `NPM-Version` action and set it to the tag of the release:
 
     ```YAML
