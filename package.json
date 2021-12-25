@@ -1,9 +1,6 @@
 {
   "name": "@wulfland/package-demo",
   "version": "1.0.1",
-  "dependencies": {
-    "@wulfland/acceleratedevops": "1.2.1"
-  },
   "description": "This is just a demo to set up a package in minutes.",
   "main": "index.js",
   "scripts": {
@@ -18,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wulfland/package-demo/issues"
   },
-  "homepage": "https://github.com/wulfland/package-demo#readme"
+  "homepage": "https://github.com/wulfland/package-demo#readme",
+  "dependencies": {
+    "@wulfland/acceleratedevops": "^1.2.1"
+  }
 }
