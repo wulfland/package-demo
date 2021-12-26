@@ -7,13 +7,12 @@ registries:
     token: ${{secrets.PAT}}
   npm-org:
     type: npm-registry
-    url: https://registry.npmjs.org/
+    url: https://registry.npmjs.org
 
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     registries: 
-      - my-npm-pkg
       - npm-org
     schedule:
       interval: "daily"
