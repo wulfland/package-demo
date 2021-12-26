@@ -6,11 +6,24 @@ registries:
     url: https://npm.pkg.github.com
     token: ${{secrets.PAT}}
 
+registries:
+  npm-org:
+    type: npm-registry
+    url: https://registry.npmjs.org/
+
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     registries: 
       - my-npm-pkg
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 15
+    
+  - package-ecosystem: "npm"
+    directory: "/"
+    registries: 
+      - npm-org
     schedule:
       interval: "daily"
     open-pull-requests-limit: 15
