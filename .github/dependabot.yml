@@ -1,11 +1,4 @@
 version: 2
-
-registries:
-  my-npm-pkg:
-    type: npm-registry
-    url: https://npm.pkg.github.com
-    token: ${{secrets.PAT}}
-
 updates:
   - package-ecosystem: "npm"
     directory: "/"
